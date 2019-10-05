@@ -80,6 +80,9 @@
     <Compile Include="ViewAllQuotes.Designer.cs">
       <DependentUpon>ViewAllQuotes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddQuotes.resx">
+      <DependentUpon>AddQuotes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DisplayQuote.resx">
       <DependentUpon>DisplayQuote.cs</DependentUpon>
     </EmbeddedResource>
