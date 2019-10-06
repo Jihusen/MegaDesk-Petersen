@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MegaDesk_Petersen
 {
@@ -15,13 +16,25 @@ namespace MegaDesk_Petersen
         public DisplayQuote()
         {
             InitializeComponent();
+
+            
         }
 
         private void MainMenu_Click(object sender, EventArgs e)
         {
-            var mainMenu = (MainMenu)Tag;
-            mainMenu.Show();
-            Close();
+           
+        }
+
+        private void SeeQuote_Click(object sender, EventArgs e)
+        {
+            StreamReader reader = new StreamReader("newQuote.txt");
+            while (reader.EndOfStream == false)
+            {
+                string line = reader.ReadLine();
+                ReadFile.Text += line + " ";
+                Console.WriteLine(line);
+            }
+            reader.Close();
         }
     }
 }

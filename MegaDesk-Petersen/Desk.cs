@@ -27,7 +27,6 @@ namespace MegaDesk_Petersen
         public double Width { get; set; }
         public double Depth { get; set; }
         public uint DrawersNum { get; set; }
-        public DesktopMaterial Material { get; set; }
 
     }
 }
