@@ -141,6 +141,7 @@
             this.depthInput.TabIndex = 18;
             this.depthInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.depthInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.depthInput_KeyPress);
+            this.depthInput.Validating += new System.ComponentModel.CancelEventHandler(this.depthInput_Validating);
             // 
             // WrongDepth
             // 

@@ -114,12 +114,28 @@ namespace MegaDesk_Petersen
             {
                 string widthError = "Please enter a number between 1 and 15";
                 double widthSubmit = double.Parse(widthInput.Text);
-                if (widthSubmit < 0 || widthSubmit > 15)
+                if (widthSubmit < 0 || widthSubmit >= 15)
                 {
                     e.Cancel = true;
                     widthInput.Select(0, widthInput.Text.Length);
 
                     this.WrongWidth.SetError(widthInput, widthError);
+                }
+            }
+        }
+
+        private void depthInput_Validating(object sender, CancelEventArgs e)
+        {
+            if (depthInput.Text.Length > 0)
+            {
+                string depthError = "Please enter a number between 1 and 7";
+                double widthSubmit = double.Parse(depthInput.Text);
+                if (widthSubmit < 0 || widthSubmit >= 7)
+                {
+                    e.Cancel = true;
+                    depthInput.Select(0, depthInput.Text.Length);
+
+                    this.WrongDepth.SetError(depthInput, depthError);
                 }
             }
         }
